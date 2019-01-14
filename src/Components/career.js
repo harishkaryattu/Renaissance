@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import  { Button, Card, CardText , Navigation, Drawer, Header, Content, Layout } from 'react-mdl';
+import { Button, Card, CardText, Navigation, Drawer, Header, Content, Layout } from 'react-mdl';
 
 class CareerComponent extends Component {
   render() {
     return (
-        <div>
-            <h1>Career</h1>
-            <p>WHY JOIN RENAISSANCE?
+      <div>
+        <h1>Career</h1>
+        <p>WHY JOIN RENAISSANCE?
 
 174  We value and encourage both personal and professional development. montageabout
 
@@ -21,7 +21,7 @@ class CareerComponent extends Component {
 Renaissance is an Equal Opportunity Employer. We welcome and encourage diversity in our work force.
 
 Please direct any interest in a career at Renaissance to career@reninfo.com.au</p>
-        </div>
+      </div>
     );
   }
 }

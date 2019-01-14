@@ -5,8 +5,9 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'react-mdl/extra/material.css';
 import 'react-mdl/extra/material.js';
-import { BrowserRouter } from 'react-router-dom' ;
+import { BrowserRouter } from 'react-router-dom';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import 'react-bootstrap';
 import './Components/font-awesome/css/font-awesome.min.css'
 import './Components/css/agency.min.css'
 
@@ -19,9 +20,9 @@ import './Components/css/agency.min.css'
 ReactDOM.render(
 
     <BrowserRouter>
-    <App />
+        <App />
     </BrowserRouter>
-, document.getElementById('root'));
+    , document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

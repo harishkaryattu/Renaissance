@@ -305,7 +305,8 @@ header {
     background-size: cover;
     -o-background-size: cover;
     text-align: center;
-    color: #fff
+    color: #fff;
+    min-height: 300px;
 }
 
 header .intro-text {
@@ -328,6 +329,14 @@ header .intro-text .intro-heading {
     font-size: 50px;
     line-height: 50px;
     margin-bottom: 25px
+}
+
+#myCarousel {
+    height: 400px;
+}
+
+.carousel-inner {
+    height: 100%;
 }
 
 @media (min-width:768px) {

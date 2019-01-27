@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 class AboutComponent extends Component {
   render() {
-    return (
+    return (<section id="about">
       <div>
         <div className="container">
           <div className="row">
@@ -113,7 +113,7 @@ Renaissance has a proven track record of implementing cutting-edge technology fo
           </div>
         </div>
       </div>
-    );
+    </section>);
   }
 }
 

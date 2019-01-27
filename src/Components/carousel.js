@@ -1,59 +1,59 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
+import { Carousel } from 'react-bootstrap';
+class HeaderCarousel extends Component {
+    constructor(props, context) {
+        super(props, context);
 
-class CarouselSlider extends Component {
+        this.handleSelect = this.handleSelect.bind(this);
+
+        this.state = {
+            index: 0,
+            direction: null
+        };
+    }
+
+    handleSelect(selectedIndex, e) {
+        alert(`selected=${selectedIndex}, direction=${e.direction}`);
+        this.setState({
+            index: selectedIndex,
+            direction: e.direction
+        });
+    }
+
     render() {
+        const { index, direction } = this.state;
+
         return (
-            <div id="myCarousel" className="carousel slide" data-ride="carousel">
-                {/* <!-- Indicators --> */}
-                <ol className="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ol>
-
-                {/* <!-- Wrapper for slides --> */}
-                <div className="carousel-inner">
-                    <div className="item active">
-                        <img src="https://images.unsplash.com/photo-1502943693086-33b5b1cfdf2f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="Los Angeles" />
-                        <div className="carousel-caption">
-                            <h3>Los Angeles</h3>
-                            <p>LA is always so much fun!</p>
-                        </div>
-                    </div>
-
-                    <div className="item">
-                        <img src="./img/team/2.jpg" alt="Chicago" />
-                        <div className="carousel-caption">
-                            <h3>Los Angeles</h3>
-                            <p>LA is always so much fun!</p>
-                        </div>
-                    </div>
-
-                    <div className="item">
-                        <img src="./img/team/3.jpg" alt="New York" />
-                        <div className="carousel-caption">
-                            <h3>Los Angeles</h3>
-                            <p>LA is always so much fun!</p>
-                        </div>
-                    </div>
-                </div>
-
-                {/* <!-- Left and right controls --> */}
-                <a className="left carousel-control" href="#myCarousel" data-slide="prev">
-                    <span className="glyphicon glyphicon-chevron-left"></span>
-                    <span className="sr-only">Previous</span>
-                </a>
-                <a className="right carousel-control" href="#myCarousel" data-slide="next">
-                    <span className="glyphicon glyphicon-chevron-right"></span>
-                    <span className="sr-only">Next</span>
-
-                </a>
-            </div>
+            <Carousel
+                // activeIndex={index}
+                // direction={direction}
+                // onSelect={this.handleSelect}
+                interval={1000}
+            >
+                <Carousel.Item>
+                    <img src="/img/carousel/12.jpg" />
+                    <Carousel.Caption>
+                        <h3>First slide label</h3>
+                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img src="/img/carousel/13.jpg" />
+                    <Carousel.Caption>
+                        <h3>Second slide label</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img src="/img/carousel/14.jpg" />
+                    <Carousel.Caption>
+                        <h3>Third slide label</h3>
+                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+            </Carousel>
         );
     }
 };
 
-export default CarouselSlider;
+export default HeaderCarousel;

@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-// import './externalJs/jqBootstrapValidation.js';
-// import './externalJs/contact_me.js';
+import HeaderCarousel from './carousel';
 
-import CarouselSlider from './carousel'
 class HeaderComponent extends Component {
     render() {
         return (
@@ -15,7 +13,7 @@ class HeaderComponent extends Component {
                         <div className="intro-heading">It's Nice To Meet You</div>
                         <a href="#services" className="page-scroll btn btn-xl">Tell Me More</a>
                     </div> */}
-                    <CarouselSlider />
+                    <HeaderCarousel />
                 </div>
             </header>
 

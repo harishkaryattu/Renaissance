@@ -8,12 +8,12 @@ import DescriptionComponent from './description';
 
 
 const Main = () => (
-    <HashRouter>
+    
         <Switch>
             <Route exact path="/" component={LandingPage} />
             <Route path={"/description/:id"} component={DescriptionComponent} />
             {/* <Route path="/career" component={CareerComponent} /> */}
         </Switch>
-    </HashRouter>
+    
 )
 export default Main;
